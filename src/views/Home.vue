@@ -1,10 +1,12 @@
 <template>
-  <div class="home">
+  <div class>
     <Navbar />
-    <button @click="logout">logout</button>
-    <transition name="slide-fade" mode="out-in">
-      <router-view />
-    </transition>
+
+    <div class="home row">
+      <transition name="slide-fade" mode="out-in">
+        <router-view />
+      </transition>
+    </div>
   </div>
 </template>
 
@@ -17,10 +19,15 @@ export default {
     Navbar
   },
   methods: {
-    logout: function() {
-      this.$store.dispatch("clearUserData");
-      this.$router.push("/login");
-    }
+    // logout: function() {
+    //   this.$store.dispatch("clearUserData");
+    //   this.$router.push("/login");
+    // }
   }
 };
 </script>
+<style lang="scss">
+.home {
+  padding: 10px;
+}
+</style>

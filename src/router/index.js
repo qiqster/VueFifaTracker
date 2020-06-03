@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Login from "../views/Login.vue";
 import About from "../views/About.vue";
+import MainFeed from "../components/MainFeed.vue";
 import UserStore from "../store/index.js";
 Vue.use(VueRouter);
 
@@ -18,20 +19,21 @@ const routes = [
     meta: {
       requiresAuth: true,
     },
+    children: [
+      {
+        path: "about2",
+        component: About,
+      },
+      {
+        path: "",
+        component: MainFeed,
+      },
+    ],
   },
   {
     path: "/login",
     name: "Login",
     component: Login,
-  },
-  {
-    path: "/about",
-    name: "About",
-
-    component: About,
-    meta: {
-      requiresAuth: true,
-    },
   },
 ];
 

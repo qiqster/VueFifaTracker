@@ -19,12 +19,17 @@
                 <div class="row">
                   <div class="input-field col s12">
                     <i class="material-icons prefix">person</i>
-                    <input id="email" type="text" class="validate" />
+                    <input id="email" type="text" class="validate white-text" />
                     <label for="email">Email</label>
                   </div>
                   <div class="input-field col s12">
                     <i class="material-icons prefix">blur_on</i>
-                    <input id="password" type="tel" class="validate" />
+                    <input
+                      v-model="loginForm.password"
+                      id="password"
+                      type="tel"
+                      class="validate white-text"
+                    />
                     <label for="password">Pass</label>
                   </div>
                   <div class="input-field col s12 center">
@@ -62,9 +67,18 @@ body {
 <script>
 import router from "vue-router";
 export default {
+  data: function() {
+    return {
+      loginForm: {
+        email: "",
+        password: ""
+      }
+    };
+  },
   name: "Login",
   methods: {
     login: function() {
+      this.$store.commit("setActiveUser", { test: "aa" });
       this.$router.push("/");
     }
   }

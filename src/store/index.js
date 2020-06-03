@@ -1,15 +1,24 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from "vue";
+import Vuex from "vuex";
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
-export default new Vuex.Store({
+export const store = new Vuex.Store({
   state: {
+    user: null,
   },
-  mutations: {
-  },
+
   actions: {
+    clearUserData({ commit }) {
+      commit("setActiveUser", null);
+    },
   },
-  modules: {
-  }
-})
+  modules: {},
+  mutations: {
+    setActiveUser(state, val) {
+      state.user = val;
+    },
+  },
+});
+
+export default store;

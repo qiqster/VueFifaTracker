@@ -3,8 +3,11 @@ import Vuex from "vuex";
 
 Vue.use(Vuex);
 
+import team from "@/store/team/teamStore.js";
+
 export const store = new Vuex.Store({
   state: {
+    loadingState: false,
     user: {
       name: "Mateusz",
       login: "QiQu",
@@ -16,10 +19,15 @@ export const store = new Vuex.Store({
       commit("setActiveUser", null);
     },
   },
-  modules: {},
+  modules: {
+    team,
+  },
   mutations: {
     setActiveUser(state, val) {
       state.user = val;
+    },
+    setLoadingState(state, loading) {
+      state.loadingState = loading;
     },
   },
 });

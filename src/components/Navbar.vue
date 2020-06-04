@@ -21,7 +21,8 @@
           </li>
           <li>
             <router-link class="white-text" to="/about2">
-              <i class="material-icons left white-text">date_range</i>Weekend League
+              <i class="material-icons left white-text">date_range</i>Weekend
+              League
             </router-link>
           </li>
           <li>
@@ -51,11 +52,9 @@
     <ul class="sidenav sidenav-close green darken-3" id="mobile-navbar">
       <div class="centerMenu">
         <li>
-          <a>
-            <router-link class="white-text" to="/about2">
-              <i class="material-icons white-text">device_hub</i>My Team
-            </router-link>
-          </a>
+          <router-link class="white-text" to="/about2">
+            <i class="material-icons white-text">device_hub</i>My Team
+          </router-link>
         </li>
         <li>
           <router-link class="white-text" to="/about2">
@@ -97,8 +96,8 @@ export default {
     logout: function() {
       this.$store.dispatch("clearUserData");
       this.$router.push("/login");
-    }
-  }
+    },
+  },
 };
 </script>
 

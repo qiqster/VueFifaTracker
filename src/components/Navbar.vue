@@ -48,12 +48,14 @@
       </div>
     </nav>
 
-    <ul class="sidenav green darken-3" id="mobile-navbar">
+    <ul class="sidenav sidenav-close green darken-3" id="mobile-navbar">
       <div class="centerMenu">
         <li>
-          <router-link class="white-text" to="/about2">
-            <i class="material-icons white-text">device_hub</i>My Team
-          </router-link>
+          <a>
+            <router-link class="white-text" to="/about2">
+              <i class="material-icons white-text">device_hub</i>My Team
+            </router-link>
+          </a>
         </li>
         <li>
           <router-link class="white-text" to="/about2">

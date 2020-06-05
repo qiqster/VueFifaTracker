@@ -15,7 +15,7 @@
         </a>
         <ul class="right hide-on-med-and-down">
           <li>
-            <router-link class="white-text" to="/about2">
+            <router-link class="white-text" to="/myteam">
               <i class="material-icons left white-text">device_hub</i>My Team
             </router-link>
           </li>
@@ -52,7 +52,7 @@
     <ul class="sidenav sidenav-close green darken-3" id="mobile-navbar">
       <div class="centerMenu">
         <li>
-          <router-link class="white-text" to="/about2">
+          <router-link class="white-text" to="/myteam">
             <i class="material-icons white-text">device_hub</i>My Team
           </router-link>
         </li>
@@ -96,8 +96,8 @@ export default {
     logout: function() {
       this.$store.dispatch("clearUserData");
       this.$router.push("/login");
-    },
-  },
+    }
+  }
 };
 </script>
 

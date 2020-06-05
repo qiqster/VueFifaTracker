@@ -5,6 +5,7 @@ import Login from "../views/Login.vue";
 import About from "../views/About.vue";
 import MainFeed from "../components/MainFeed.vue";
 import UserStore from "../store/index.js";
+import MyTeam from "@/views/MyTeam";
 Vue.use(VueRouter);
 
 const routes = [
@@ -23,6 +24,10 @@ const routes = [
       {
         path: "about2",
         component: About,
+      },
+      {
+        path: "myteam",
+        component: MyTeam,
       },
       {
         path: "",

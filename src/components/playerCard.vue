@@ -4,7 +4,7 @@
       <div class="progress" v-if="loading">
         <div class="indeterminate"></div>
       </div>
-      <div v-else>{{ teamName }} {{ loading }}</div>
+      <div v-else>{{ teamName }}</div>
     </div>
   </div>
 </template>

@@ -10,10 +10,9 @@
 import playerCard from "@/components/playerCard";
 export default {
   components: {
-    playerCard
-  }
+    playerCard,
+  },
 };
 </script>
 
-<style>
-</style>
+<style></style>
